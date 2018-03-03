@@ -1,0 +1,22 @@
+Creating files in Go:
+ version 1:
+    fileName := fmt.Sprintf("%s%d%s",*outputFolder, (i+1), ".txt")
+	fmt.Printf("%s\n", fileName)
+	f, err := os.Create(fileName)
+    f.WriteString(value)
+ version 2:
+    ioutil.WriteFile(filename, p.Body, 0600)
+Reading from file: 
+    body, err := ioutil.ReadFile(filename)
+
+Creating a basic server using net/http
+
+//method belonging to Page
+func (p *Page) save() error {
+	filename := p.Title + ".txt"
+	return ioutil.WriteFile
+}
+
+p *Page is a receiver -> 
+ps is a a pointer receiver it point to the actual value of the page that will be saved 
+otherwise it will change the copy of the value
